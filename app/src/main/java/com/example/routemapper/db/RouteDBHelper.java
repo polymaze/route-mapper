@@ -1,4 +1,4 @@
-package com.example.routemapper;
+package com.example.routemapper.db;
 
 import android.content.ContentValues;
 import android.content.Context;

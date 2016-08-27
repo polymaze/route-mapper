@@ -1,8 +1,11 @@
-package com.example.routemapper;
+package com.example.routemapper.loader;
 
 import android.content.Context;
 import android.database.Cursor;
 import android.content.AsyncTaskLoader;
+
+import com.example.routemapper.data_model.RouteItem;
+import com.example.routemapper.db.RouteDBHelper;
 
 import java.util.ArrayList;
 import java.util.List;

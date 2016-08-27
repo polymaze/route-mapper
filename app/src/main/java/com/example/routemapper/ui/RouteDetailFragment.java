@@ -1,4 +1,4 @@
-package com.example.routemapper;
+package com.example.routemapper.ui;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.routemapper.R;
 
 public class RouteDetailFragment extends Fragment
 {

@@ -1,11 +1,11 @@
-package com.example.routemapper;
+package com.example.routemapper.loader;
 
 import android.content.Context;
 import android.database.Cursor;
 import android.content.AsyncTaskLoader;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.example.routemapper.data_model.RouteItem;
+import com.example.routemapper.db.RouteDBHelper;
 
 public class RouteItemLoader extends AsyncTaskLoader<RouteItem>
 {

@@ -1,4 +1,4 @@
-package com.example.routemapper;
+package com.example.routemapper.data_model;
 
 public class RouteItem
 {

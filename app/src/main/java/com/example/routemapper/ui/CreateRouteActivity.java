@@ -1,7 +1,9 @@
-package com.example.routemapper;
+package com.example.routemapper.ui;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+
+import com.example.routemapper.R;
 
 public class CreateRouteActivity extends AppCompatActivity
 {

@@ -1,4 +1,4 @@
-package com.example.routemapper;
+package com.example.routemapper.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,6 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+
+import com.example.routemapper.R;
+import com.example.routemapper.data_model.RouteItem;
 
 import java.util.List;
 

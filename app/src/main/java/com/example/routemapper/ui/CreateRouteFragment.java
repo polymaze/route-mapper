@@ -1,4 +1,4 @@
-package com.example.routemapper;
+package com.example.routemapper.ui;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -15,6 +15,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.routemapper.R;
+import com.example.routemapper.db.RouteDBHelper;
 import com.thebluealliance.spectrum.SpectrumPalette;
 
 import static android.view.View.*;

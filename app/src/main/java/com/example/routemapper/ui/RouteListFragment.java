@@ -1,4 +1,4 @@
-package com.example.routemapper;
+package com.example.routemapper.ui;
 
 import android.app.Fragment;
 import android.app.LoaderManager;
@@ -11,6 +11,11 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+
+import com.example.routemapper.R;
+import com.example.routemapper.data_model.RouteItem;
+import com.example.routemapper.adapter.RouteItemArrayAdapter;
+import com.example.routemapper.loader.RouteLoader;
 
 import java.util.List;
 
