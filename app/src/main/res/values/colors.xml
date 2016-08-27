@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#558B2F</color>
+    <color name="colorPrimaryDark">#33691E</color>
+    <color name="colorAccent">#CDDC39</color>
+
+
+    <color name="fl_pink">#EC407A</color>
+    <color name="red">#FF0000</color>
+    <color name="orange">#E65100</color>
+    <color name="fl_orange">#FB8C00</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="fl_yellow">#EEFF41</color>
+    <color name="fl_green">#00FF00</color>
+    <color name="green">#2E7D32</color>
+    <color name="dark_green">#004D40</color>
+    <color name="blue">#0000FF</color>
+    <color name="purple">#7F00FF</color>
+    <color name="brown">#3E2723</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <array name="colors_array">
+        <item>@color/fl_pink</item>
+        <item>@color/red</item>
+        <item>@color/orange</item>
+        <item>@color/fl_orange</item>
+        <item>@color/yellow</item>
+        <item>@color/fl_yellow</item>
+        <item>@color/fl_green</item>
+        <item>@color/green</item>
+        <item>@color/dark_green</item>
+        <item>@color/blue</item>
+        <item>@color/purple</item>
+        <item>@color/brown</item>
+        <item>@color/black</item>
+        <item>@color/white</item>
+    </array>
+</resources>
+
