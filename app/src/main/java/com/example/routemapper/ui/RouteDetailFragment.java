@@ -20,9 +20,13 @@ public class RouteDetailFragment extends Fragment implements LoaderManager.Loade
     private static final int LOADER_ID = 2;
 
     private String routeNameId;
-
     private RouteItem mRouteItem;
-    private TextView mTitle;
+
+    private TextView mGradeView;
+    private TextView mDateView;
+    private TextView mColorView;
+    private TextView mSetterView;
+    private ImageView mLocationImage;
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState)
@@ -41,7 +45,12 @@ public class RouteDetailFragment extends Fragment implements LoaderManager.Loade
     public void onLoadFinished(Loader<RouteItem> loader, RouteItem data)
     {
         mRouteItem = data;
-        mTitle.setText(mRouteItem.name);
+        mGradeView.setText(mRouteItem.grade);
+        mDateView.setText(mRouteItem.date);
+        mColorView.setTextColor(mRouteItem.color);
+        mSetterView.setText(mRouteItem.setter);
+        int imageId = getRouteLocationResourceId(mRouteItem.location);
+        mLocationImage.setImageResource(imageId);
     }
 
     @Override
@@ -58,27 +67,74 @@ public class RouteDetailFragment extends Fragment implements LoaderManager.Loade
         Intent intent = getActivity().getIntent();
         routeNameId = intent.getStringExtra(Intent.EXTRA_TEXT);
 
-        mTitle = (TextView)rootView.findViewById(R.id.route_detail_title);
-        ImageView imageView = (ImageView)rootView.findViewById(R.id.route_location_image);
-
-        int locations[] = {
-                R.drawable.slab,
-                R.drawable.near_slab,
-                R.drawable.chimney,
-                R.drawable.big_roof,
-                R.drawable.slant,
-                R.drawable.vert_right,
-                R.drawable.dihedral,
-                R.drawable.vert_left,
-                R.drawable.small_roof,
-                R.drawable.double_arete,
-                R.drawable.near_lead,
-                R.drawable.lead,
-                R.drawable.exit};
-
-        imageView.setImageResource(locations[0]);
+        mGradeView = (TextView)rootView.findViewById(R.id.route_detail_grade);
+        mDateView = (TextView)rootView.findViewById(R.id.route_detail_date);
+        mColorView = (TextView)rootView.findViewById(R.id.route_detail_color);
+        mSetterView = (TextView)rootView.findViewById(R.id.route_detail_setter);
+        mLocationImage = (ImageView)rootView.findViewById(R.id.route_location_image);
 
         return rootView;
+    }
+
+    public int getRouteLocationResourceId(String location)
+    {
+        int id = 0;
+
+        switch (location)
+        {
+            case "Slab Wall":
+                id = R.drawable.slab;
+                break;
+
+            case "Near Slab Wall":
+                id = R.drawable.near_slab;
+                break;
+
+            case "The Chimney":
+                id = R.drawable.chimney;
+                break;
+
+            case "The Big Roof":
+                id = R.drawable.big_roof;
+                break;
+
+            case "Slant Wall":
+                id = R.drawable.slant;
+                break;
+
+            case "Vert Wall - Right":
+                id = R.drawable.vert_right;
+                break;
+
+            case "The Dihedral":
+                id = R.drawable.dihedral;
+                break;
+
+            case "Vert Wall - Left":
+                id = R.drawable.vert_left;
+                break;
+
+            case "The Small Roof":
+                id = R.drawable.small_roof;
+                break;
+
+            case "The Double Arete":
+                id = R.drawable.double_arete;
+                break;
+
+            case "Near Lead Wall":
+                id = R.drawable.near_lead;
+                break;
+
+            case "Lead Wall":
+                id = R.drawable.lead;
+                break;
+
+            case "Exit Wall":
+                id = R.drawable.exit;
+                break;
+        }
+        return id;
     }
 
 
