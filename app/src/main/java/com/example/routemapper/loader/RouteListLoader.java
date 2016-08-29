@@ -10,11 +10,11 @@ import com.example.routemapper.db.RouteDBHelper;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RouteLoader extends AsyncTaskLoader<List<RouteItem>>
+public class RouteListLoader extends AsyncTaskLoader<List<RouteItem>>
 {
     private Context mContext;
 
-    public RouteLoader(Context context)
+    public RouteListLoader(Context context)
     {
         super(context);
         mContext = context;

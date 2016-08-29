@@ -88,6 +88,13 @@ public class RouteDBHelper extends SQLiteOpenHelper
                 + ROUTE_COLUMN_ID + " = ? ", new String[] { Integer.toString(id) } );
     }
 
+    public Cursor getRouteByName(String name)
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+        return db.rawQuery( "SELECT * FROM " + ROUTE_TABLE_NAME + " WHERE "
+                + ROUTE_COLUMN_NAME + " = ? ", new String[] { name } );
+    }
+
     public Cursor getAllRoutes()
     {
         SQLiteDatabase db = this.getReadableDatabase();
