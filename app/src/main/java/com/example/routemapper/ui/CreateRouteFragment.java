@@ -26,8 +26,6 @@ import static android.widget.TextView.*;
 public class CreateRouteFragment extends Fragment implements OnClickListener, OnEditorActionListener,
         AdapterView.OnItemSelectedListener, SpectrumPalette.OnColorSelectedListener
 {
-    private static final String ARG_ROUTE_ID = "ArgRouteId";
-
     private String mName;
     private String mDate;
     private Integer mColor;
@@ -41,17 +39,6 @@ public class CreateRouteFragment extends Fragment implements OnClickListener, On
     private Spinner mLocationSpinner;
     private Spinner mGradeSpinner;
     private Spinner mSetterSpinner;
-
-
-    public static CreateRouteFragment newInstance(int id)
-    {
-        Bundle args = new Bundle();
-        args.putInt(ARG_ROUTE_ID, id);
-        CreateRouteFragment fragment = new CreateRouteFragment();
-        fragment.setArguments(args);
-
-        return fragment;
-    }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState)
