@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="locations_array">
+        <item>Slab Wall</item>
+        <item>Near Slab Wall</item>
+        <item>The Chimney</item>
+        <item>The Big Roof</item>
+        <item>Slant Wall</item>
+        <item>Vert Wall - Right</item>
+        <item>The Dihedral</item>
+        <item>Vert Wall - Left</item>
+        <item>The Small Roof</item>
+        <item>The Double Arete</item>
+        <item>Near Lead Wall</item>
+        <item>Lead Wall</item>
+        <item>Exit Wall</item>
+    </string-array>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="setters_array">
+        <item>DG</item>
+        <item>AH</item>
+        <item>GF</item>
+        <item>AO</item>
+        <item>JR</item>
+        <item>AS</item>
+        <item>ED</item>
+        <item>BJ</item>
+        <item>GG</item>
+        <item>NC</item>
+        <item>MP</item>
+    </string-array>
+</resources>
