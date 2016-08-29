@@ -1,7 +1,10 @@
 package com.example.routemapper.ui;
 
+import android.app.LoaderManager;
+import android.content.Intent;
+import android.content.Loader;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,33 +12,53 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.routemapper.R;
+import com.example.routemapper.data_model.RouteItem;
+import com.example.routemapper.loader.RouteItemLoader;
 
-public class RouteDetailFragment extends Fragment
+public class RouteDetailFragment extends Fragment implements LoaderManager.LoaderCallbacks<RouteItem>
 {
-    private static final String ARG_ROUTE_ID = "ArgRouteId";
+    private static final int LOADER_ID = 2;
 
-    public static RouteDetailFragment newInstance(int id)
-    {
-        Bundle args = new Bundle();
-        args.putInt(ARG_ROUTE_ID, id);
-        RouteDetailFragment fragment = new RouteDetailFragment();
-        fragment.setArguments(args);
+    private String routeNameId;
 
-        return fragment;
-    }
+    private RouteItem mRouteItem;
+    private TextView mTitle;
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState)
     {
         super.onActivityCreated(savedInstanceState);
+        getLoaderManager().initLoader(LOADER_ID, null, this).forceLoad();
+    }
+
+    @Override
+    public Loader<RouteItem> onCreateLoader(int id, Bundle args)
+    {
+        return new RouteItemLoader(getActivity(), routeNameId);
+    }
+
+    @Override
+    public void onLoadFinished(Loader<RouteItem> loader, RouteItem data)
+    {
+        mRouteItem = data;
+        mTitle.setText(mRouteItem.name);
+    }
+
+    @Override
+    public void onLoaderReset(Loader<RouteItem> loader)
+    {
+        // Do nothing. Yet.
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
         View rootView = inflater.inflate(R.layout.fragment_route_detail, container, false);
-        TextView title = (TextView)rootView.findViewById(R.id.route_detail_title);
-        title.setText("Success!");
+
+        Intent intent = getActivity().getIntent();
+        routeNameId = intent.getStringExtra(Intent.EXTRA_TEXT);
+
+        mTitle = (TextView)rootView.findViewById(R.id.route_detail_title);
         ImageView imageView = (ImageView)rootView.findViewById(R.id.route_location_image);
 
         int locations[] = {
@@ -57,4 +80,6 @@ public class RouteDetailFragment extends Fragment
 
         return rootView;
     }
+
+
 }
