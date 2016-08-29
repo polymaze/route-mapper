@@ -1,9 +1,11 @@
 package com.example.routemapper.ui;
 
 import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.app.LoaderManager;
 import android.content.Intent;
 import android.content.Loader;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,7 +17,7 @@ import android.widget.ListView;
 import com.example.routemapper.R;
 import com.example.routemapper.data_model.RouteItem;
 import com.example.routemapper.adapter.RouteItemArrayAdapter;
-import com.example.routemapper.loader.RouteLoader;
+import com.example.routemapper.loader.RouteListLoader;
 
 import java.util.List;
 
@@ -25,10 +27,10 @@ import static android.widget.AdapterView.OnItemClickListener;
 public class RouteListFragment extends Fragment implements OnClickListener, OnItemClickListener, LoaderManager.LoaderCallbacks<List<RouteItem>>
 {
     public final static String KEY_EXTRA_ROUTE_ID = "KEY_EXTRA_ROUTE_ID";
-    public final static String KEY_ROUTE_ID = "KEY_ROUTE_ID";
 
     private static final int LOADER_ID = 1;
     private ListView mListView;
+    private List<RouteItem> mRouteList;
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState)
@@ -40,12 +42,13 @@ public class RouteListFragment extends Fragment implements OnClickListener, OnIt
     @Override
     public Loader<List<RouteItem>> onCreateLoader(int id, Bundle args)
     {
-        return new RouteLoader(getActivity());
+        return new RouteListLoader(getActivity());
     }
 
     @Override
     public void onLoadFinished(Loader<List<RouteItem>> loader, List<RouteItem> data)
     {
+        mRouteList = data;
         RouteItemArrayAdapter adapter = new RouteItemArrayAdapter(getActivity(),
                 android.R.layout.simple_list_item_1, data);
         mListView.setAdapter(adapter);
@@ -54,7 +57,6 @@ public class RouteListFragment extends Fragment implements OnClickListener, OnIt
     @Override
     public void onLoaderReset(Loader<List<RouteItem>> loader)
     {
-
         // Do Nothing. Yet.
     }
 
@@ -90,8 +92,11 @@ public class RouteListFragment extends Fragment implements OnClickListener, OnIt
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id)
     {
+        RouteItem route = mRouteList.get(position);
+        String routeName = route.name;
+
         Intent intent = new Intent(getActivity(), RouteDetailActivity.class);
-        intent.putExtra(KEY_ROUTE_ID, id);
+        intent.putExtra(Intent.EXTRA_TEXT, routeName);
         startActivity(intent);
     }
 }
