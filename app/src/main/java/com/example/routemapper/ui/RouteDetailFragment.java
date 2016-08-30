@@ -19,7 +19,7 @@ public class RouteDetailFragment extends Fragment implements LoaderManager.Loade
 {
     private static final int LOADER_ID = 2;
 
-    private String routeNameId;
+    private int routeId;
     private RouteItem mRouteItem;
 
     private TextView mGradeView;
@@ -38,7 +38,7 @@ public class RouteDetailFragment extends Fragment implements LoaderManager.Loade
     @Override
     public Loader<RouteItem> onCreateLoader(int id, Bundle args)
     {
-        return new RouteItemLoader(getActivity(), routeNameId);
+        return new RouteItemLoader(getActivity(), routeId);
     }
 
     @Override
@@ -65,7 +65,7 @@ public class RouteDetailFragment extends Fragment implements LoaderManager.Loade
         View rootView = inflater.inflate(R.layout.fragment_route_detail, container, false);
 
         Intent intent = getActivity().getIntent();
-        routeNameId = intent.getStringExtra(Intent.EXTRA_TEXT);
+        routeId = intent.getIntExtra(Intent.EXTRA_KEY_EVENT, 0);
 
         mGradeView = (TextView)rootView.findViewById(R.id.route_detail_grade);
         mDateView = (TextView)rootView.findViewById(R.id.route_detail_date);

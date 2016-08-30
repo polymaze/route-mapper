@@ -91,8 +91,10 @@ public class RouteListFragment extends Fragment implements OnClickListener, OnIt
     {
         RouteItem route = mRouteList.get(position);
         String routeName = route.name;
+        int routeId = route.id;
 
         Intent intent = new Intent(getActivity(), RouteDetailActivity.class);
+        intent.putExtra(Intent.EXTRA_KEY_EVENT, routeId);
         intent.putExtra(Intent.EXTRA_TEXT, routeName);
         startActivity(intent);
     }
