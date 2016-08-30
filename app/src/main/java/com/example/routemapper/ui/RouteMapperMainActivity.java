@@ -5,12 +5,12 @@ import android.os.Bundle;
 
 import com.example.routemapper.R;
 
-public class RouteListActivity extends AppCompatActivity
+public class RouteMapperMainActivity extends AppCompatActivity
 {
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_route_list);
+        setContentView(R.layout.activity_main);
     }
 }
