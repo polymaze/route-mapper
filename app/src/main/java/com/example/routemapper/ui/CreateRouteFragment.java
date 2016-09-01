@@ -2,6 +2,7 @@ package com.example.routemapper.ui;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -44,6 +45,21 @@ public class CreateRouteFragment extends Fragment implements OnClickListener, On
     public void onActivityCreated(Bundle savedInstanceState)
     {
         super.onActivityCreated(savedInstanceState);
+    }
+
+    public void onStart(){
+        super.onStart();
+        EditText txtDate=(EditText)findViewById(R.id.txtdate);
+        txtDate.setOnFocusChangeListener(new View.OnFocusChangeListener(){
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if(hasFocus){
+                    DateDialog dialog = new DateDialog(v);
+                    FragmentTransaction ft = getFragmentManager().beginTransaction();
+                    dialog.show(ft,"DatePicker");
+                }
+            }
+        });
     }
 
     @Override
