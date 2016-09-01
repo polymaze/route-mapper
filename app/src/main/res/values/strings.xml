@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Route Mapper</string>
+
+    <!-- Buttons -->
     <string name="button_add_new_route">Add New Route</string>
+    <string name="button_view_all_routes">View All Routes</string>
 </resources>

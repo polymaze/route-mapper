@@ -63,8 +63,11 @@ public class RouteMapperMainFragment extends Fragment implements OnClickListener
 
         mBarChart = (BarChart) rootView.findViewById(R.id.bar_chart);
 
-        Button viewAllButton = (Button) rootView.findViewById(R.id.button_view_all_routes);
-        viewAllButton.setOnClickListener(this);
+        Button viewAllRoutesButton = (Button) rootView.findViewById(R.id.button_view_all_routes);
+        viewAllRoutesButton.setOnClickListener(this);
+
+        Button addRouteButton = (Button) rootView.findViewById(R.id.button_add_new_route);
+        addRouteButton.setOnClickListener(this);
 
         return rootView;
     }
@@ -72,10 +75,17 @@ public class RouteMapperMainFragment extends Fragment implements OnClickListener
     @Override
     public void onClick(View v)
     {
+        Intent intent;
+
         switch (v.getId())
         {
             case R.id.button_view_all_routes:
-                Intent intent = new Intent(getActivity(), RouteListActivity.class);
+                intent = new Intent(getActivity(), RouteListActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.button_add_new_route:
+                intent = new Intent(getActivity(), CreateRouteActivity.class);
                 startActivity(intent);
                 break;
 

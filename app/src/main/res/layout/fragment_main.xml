@@ -13,9 +13,16 @@
 
     <Button
         android:id="@+id/button_view_all_routes"
+        android:text="@string/button_view_all_routes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="View All Routes"
+        android:gravity="bottom"/>
+
+    <Button
+        android:id="@+id/button_add_new_route"
+        android:text="@string/button_add_new_route"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="bottom"/>
 
 </LinearLayout>
