@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 include ':app'
+||||||| merged common ancestors
+=======
+include ':app'
+>>>>>>> f8c83c03ef8483c08c3ade57f40a65edd8c258bb

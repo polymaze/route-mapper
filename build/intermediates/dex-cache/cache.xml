@@ -2,60 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/Users/andrewsmith/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
-        <dex dex="/Users/andrewsmith/AndroidStudioProjects/route-mapper/app/build/intermediates/pre-dexed/debug/support-annotations-23.4.0-895d0ea34a665022798acafd11666ac378e98f39.jar" />
-    </item>
-    <item
         jar="/Users/andrewsmith/AndroidStudioProjects/route-mapper/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.2"
         sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
         <dex dex="/Users/andrewsmith/AndroidStudioProjects/route-mapper/app/build/intermediates/pre-dexed/debug/classes-989671969a838d2a1d0ac03263aadc45dd711223.jar" />
-    </item>
-    <item
-        jar="/Users/andrewsmith/AndroidStudioProjects/route-mapper/app/build/intermediates/exploded-aar/com.thebluealliance/spectrum/0.6.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="81a2aa0a538b47e6d220262f98b914c35985c927">
-        <dex dex="/Users/andrewsmith/AndroidStudioProjects/route-mapper/app/build/intermediates/pre-dexed/debug/classes-87decc18afb443f7b463b512547d7eef8c7d8d81.jar" />
-    </item>
-    <item
-        jar="/Users/andrewsmith/.gradle/caches/modules-2/files-2.1/org.greenrobot/eventbus/3.0.0/ddd99896e9569eaababbe81b35d80e1b91c4ad85/eventbus-3.0.0.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="ddd99896e9569eaababbe81b35d80e1b91c4ad85">
-        <dex dex="/Users/andrewsmith/AndroidStudioProjects/route-mapper/app/build/intermediates/pre-dexed/debug/eventbus-3.0.0-e1b372ff643b325fac20b83ad697ae35d5c85c0e.jar" />
-    </item>
-    <item
-        jar="/Users/andrewsmith/AndroidStudioProjects/route-mapper/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="/Users/andrewsmith/AndroidStudioProjects/route-mapper/app/build/intermediates/pre-dexed/debug/classes-50f329eb47eeccc9e60f3314181c9c3673e81404.jar" />
-    </item>
-    <item
-        jar="/Users/andrewsmith/AndroidStudioProjects/route-mapper/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="/Users/andrewsmith/AndroidStudioProjects/route-mapper/app/build/intermediates/pre-dexed/debug/classes-4e83253f0c665158c402ff5bf7fd5322f611589f.jar" />
-    </item>
-    <item
-        jar="/Users/andrewsmith/AndroidStudioProjects/route-mapper/app/build/intermediates/exploded-aar/com.android.support/preference-v7/23.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="b954d8588de65c67c1ec482678620845bbb5f737">
-        <dex dex="/Users/andrewsmith/AndroidStudioProjects/route-mapper/app/build/intermediates/pre-dexed/debug/classes-75eaaddf572694c377c063082cae7359837b57c9.jar" />
-    </item>
-    <item
-        jar="/Users/andrewsmith/AndroidStudioProjects/route-mapper/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
-        <dex dex="/Users/andrewsmith/AndroidStudioProjects/route-mapper/app/build/intermediates/pre-dexed/debug/internal_impl-23.4.0-17d9ca31b5eb70adcbdb7e431201b9afabc2f749.jar" />
     </item>
     <item
         jar="/Users/andrewsmith/AndroidStudioProjects/route-mapper/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
@@ -70,6 +21,62 @@
         revision="23.0.2"
         sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
         <dex dex="/Users/andrewsmith/AndroidStudioProjects/route-mapper/app/build/intermediates/pre-dexed/debug/classes-2f3e9d993a3a0f98413b5fbf9aca6200d396d8ed.jar" />
+    </item>
+    <item
+        jar="/Users/andrewsmith/AndroidStudioProjects/route-mapper/app/build/intermediates/exploded-aar/com.thebluealliance/spectrum/0.6.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="81a2aa0a538b47e6d220262f98b914c35985c927">
+        <dex dex="/Users/andrewsmith/AndroidStudioProjects/route-mapper/app/build/intermediates/pre-dexed/debug/classes-87decc18afb443f7b463b512547d7eef8c7d8d81.jar" />
+    </item>
+    <item
+        jar="/Users/andrewsmith/AndroidStudioProjects/route-mapper/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/Users/andrewsmith/AndroidStudioProjects/route-mapper/app/build/intermediates/pre-dexed/debug/classes-50f329eb47eeccc9e60f3314181c9c3673e81404.jar" />
+    </item>
+    <item
+        jar="/Users/andrewsmith/.gradle/caches/modules-2/files-2.1/com.github.PhilJay/MPAndroidChart/v3.0.0-beta1/54d65d51b5ebec588a19b2384efb6395b5bf5b18/MPAndroidChart-v3.0.0-beta1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="54d65d51b5ebec588a19b2384efb6395b5bf5b18">
+        <dex dex="/Users/andrewsmith/route-mapper/app/build/intermediates/pre-dexed/debug/MPAndroidChart-v3.0.0-beta1-ab0136cf90daf6b19c4b593e3a4c11bac3da9cd0.jar" />
+    </item>
+    <item
+        jar="/Users/andrewsmith/AndroidStudioProjects/route-mapper/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/Users/andrewsmith/AndroidStudioProjects/route-mapper/app/build/intermediates/pre-dexed/debug/internal_impl-23.4.0-17d9ca31b5eb70adcbdb7e431201b9afabc2f749.jar" />
+    </item>
+    <item
+        jar="/Users/andrewsmith/.gradle/caches/modules-2/files-2.1/org.greenrobot/eventbus/3.0.0/ddd99896e9569eaababbe81b35d80e1b91c4ad85/eventbus-3.0.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ddd99896e9569eaababbe81b35d80e1b91c4ad85">
+        <dex dex="/Users/andrewsmith/AndroidStudioProjects/route-mapper/app/build/intermediates/pre-dexed/debug/eventbus-3.0.0-e1b372ff643b325fac20b83ad697ae35d5c85c0e.jar" />
+    </item>
+    <item
+        jar="/Users/andrewsmith/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/Users/andrewsmith/AndroidStudioProjects/route-mapper/app/build/intermediates/pre-dexed/debug/support-annotations-23.4.0-895d0ea34a665022798acafd11666ac378e98f39.jar" />
+    </item>
+    <item
+        jar="/Users/andrewsmith/AndroidStudioProjects/route-mapper/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/andrewsmith/AndroidStudioProjects/route-mapper/app/build/intermediates/pre-dexed/debug/classes-4e83253f0c665158c402ff5bf7fd5322f611589f.jar" />
+    </item>
+    <item
+        jar="/Users/andrewsmith/AndroidStudioProjects/route-mapper/app/build/intermediates/exploded-aar/com.android.support/preference-v7/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="b954d8588de65c67c1ec482678620845bbb5f737">
+        <dex dex="/Users/andrewsmith/AndroidStudioProjects/route-mapper/app/build/intermediates/pre-dexed/debug/classes-75eaaddf572694c377c063082cae7359837b57c9.jar" />
     </item>
 
 </items>
