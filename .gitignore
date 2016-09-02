@@ -1,3 +1,10 @@
 .idea
 .gradle
-
+/gradle.properties
+/gradlew
+/gradlew.bat
+/local.properties
+/route-mapper.iml
+/build/
+/app/app.iml
+/app/build
