@@ -388,6 +388,7 @@
     <eat-comment/>
     <string name="app_name">Route Mapper</string>
     <string name="button_add_new_route">Add New Route</string>
+    <string name="button_view_all_routes">View All Routes</string>
     <!-- From: file:/C:/Users/polymaze/Desktop/MAIN/PROJECTS/AndroidSDK/route-mapper/app/build/intermediates/exploded-aar/com.thebluealliance/spectrum/0.6.0/res/values/values.xml -->
     <eat-comment/>
     <string name="default_dialog_title">Select a color</string>

@@ -7,10 +7,9 @@
     tools:context=".MainActivity">
 
     <fragment
-        android:name="com.example.routemapper.ui.RouteListFragment"
-        android:id="@+id/fragment_route_list"
+        android:name="com.example.routemapper.ui.RouteMapperMainFragment"
+        android:id="@+id/fragment_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
-</LinearLayout>
-<!-- From: file:/C:/Users/polymaze/Desktop/MAIN/PROJECTS/AndroidSDK/route-mapper/app/src/main/res/layout/activity_main.xml -->
+</LinearLayout><!-- From: file:/C:/Users/polymaze/Desktop/MAIN/PROJECTS/AndroidSDK/route-mapper/app/src/main/res/layout/activity_main.xml -->

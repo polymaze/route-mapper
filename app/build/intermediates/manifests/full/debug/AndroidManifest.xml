@@ -14,12 +14,14 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.routemapper.ui.RouteListActivity" >
+        <activity android:name="com.example.routemapper.ui.RouteMapperMainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name="com.example.routemapper.ui.RouteListActivity" >
         </activity>
         <activity android:name="com.example.routemapper.ui.CreateRouteActivity" >
         </activity>

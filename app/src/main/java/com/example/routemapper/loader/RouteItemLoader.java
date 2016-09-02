@@ -10,23 +10,24 @@ import com.example.routemapper.db.RouteDBHelper;
 public class RouteItemLoader extends AsyncTaskLoader<RouteItem>
 {
     private Context mContext;
-    private String mRouteName;
+    private int mRouteId;
 
-    public RouteItemLoader(Context context, String name)
+    public RouteItemLoader(Context context, int id)
     {
         super(context);
         mContext = context;
-        mRouteName = name;
+        mRouteId = id;
     }
 
     @Override
     public RouteItem loadInBackground()
     {
         RouteDBHelper dbHelper = new RouteDBHelper(mContext);
-        Cursor cursor = dbHelper.getRouteByName(mRouteName);
+        Cursor cursor = dbHelper.getRoute(mRouteId);
         cursor.moveToFirst();
 
-        return new RouteItem(cursor.getString(cursor.getColumnIndex("name")),
+        return new RouteItem(cursor.getInt(cursor.getColumnIndex("_id")),
+                cursor.getString(cursor.getColumnIndex("name")),
                 cursor.getString(cursor.getColumnIndex("date")),
                 cursor.getInt(cursor.getColumnIndex("color")),
                 cursor.getString(cursor.getColumnIndex("location")),

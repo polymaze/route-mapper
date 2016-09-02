@@ -190,4 +190,3 @@ public class CreateRouteFragment extends Fragment implements OnClickListener, On
         mColor = color;
     }
 }
-
