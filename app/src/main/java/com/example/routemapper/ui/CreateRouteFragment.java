@@ -2,6 +2,7 @@ package com.example.routemapper.ui;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -53,6 +54,7 @@ public class CreateRouteFragment extends Fragment implements OnClickListener, On
 
         mNameEdit = (EditText)rootView.findViewById(R.id.edit_route_name);
         mNameEdit.setOnEditorActionListener(this);
+
         mDateEdit = (EditText)rootView.findViewById(R.id.edit_route_date);
         mDateEdit.setOnEditorActionListener(this);
 
@@ -174,4 +176,3 @@ public class CreateRouteFragment extends Fragment implements OnClickListener, On
         mColor = color;
     }
 }
-
