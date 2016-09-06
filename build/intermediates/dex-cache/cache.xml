@@ -2,74 +2,11 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\polymaze\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jar="C:\Users\polymaze\.gradle\caches\modules-2\files-2.1\com.github.PhilJay\MPAndroidChart\v3.0.0-beta1\54d65d51b5ebec588a19b2384efb6395b5bf5b18\MPAndroidChart-v3.0.0-beta1.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
-        <dex dex="C:\Users\polymaze\Desktop\MAIN\PROJECTS\AndroidSDK\route-mapper\app\build\intermediates\pre-dexed\debug\support-annotations-23.4.0-146663755da034ee2176a819ce229992dab7aaa6.jar" />
-    </item>
-    <item
-        jar="C:\Users\polymaze\Desktop\MAIN\PROJECTS\AndroidSDK\route-mapper\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
-        <dex dex="C:\Users\polymaze\Desktop\MAIN\PROJECTS\AndroidSDK\route-mapper\app\build\intermediates\pre-dexed\debug\classes-57b539aef3f2340268506c1a7554535737ead6c3.jar" />
-    </item>
-    <item
-        jar="C:\Users\polymaze\Desktop\MAIN\PROJECTS\AndroidSDK\route-mapper\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
-        <dex dex="C:\Users\polymaze\Desktop\MAIN\PROJECTS\AndroidSDK\route-mapper\app\build\intermediates\pre-dexed\debug\classes-5d2ab4257f36ee974293a8e0c4c8eb5b7452f34c.jar" />
-    </item>
-    <item
-        jar="C:\Users\polymaze\Desktop\MAIN\PROJECTS\AndroidSDK\route-mapper\app\build\intermediates\exploded-aar\com.android.support\preference-v7\23.4.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="b954d8588de65c67c1ec482678620845bbb5f737">
-        <dex dex="C:\Users\polymaze\Desktop\MAIN\PROJECTS\AndroidSDK\route-mapper\app\build\intermediates\pre-dexed\debug\classes-86b857cbdc6bf952ff2d464efa7b63352b2786b9.jar" />
-    </item>
-    <item
-        jar="C:\Users\polymaze\Desktop\MAIN\PROJECTS\AndroidSDK\route-mapper\app\build\intermediates\exploded-aar\com.thebluealliance\spectrum\0.6.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="81a2aa0a538b47e6d220262f98b914c35985c927">
-        <dex dex="C:\Users\polymaze\Desktop\MAIN\PROJECTS\AndroidSDK\route-mapper\app\build\intermediates\pre-dexed\debug\classes-215542b70967681c3b386108a74dc08cf9c0e4d3.jar" />
-    </item>
-    <item
-        jar="C:\Users\polymaze\.gradle\caches\modules-2\files-2.1\org.greenrobot\eventbus\3.0.0\ddd99896e9569eaababbe81b35d80e1b91c4ad85\eventbus-3.0.0.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="ddd99896e9569eaababbe81b35d80e1b91c4ad85">
-        <dex dex="C:\Users\polymaze\Desktop\MAIN\PROJECTS\AndroidSDK\route-mapper\app\build\intermediates\pre-dexed\debug\eventbus-3.0.0-edbac2bdc59543e87b5914cd85ac4b910516c5d4.jar" />
-    </item>
-    <item
-        jar="C:\Users\polymaze\Desktop\MAIN\PROJECTS\AndroidSDK\route-mapper\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="C:\Users\polymaze\Desktop\MAIN\PROJECTS\AndroidSDK\route-mapper\app\build\intermediates\pre-dexed\debug\classes-e51a2e0e9f062fd8729c5f27c7911eb37a0a6a55.jar" />
-    </item>
-    <item
-        jar="C:\Users\polymaze\Desktop\MAIN\PROJECTS\AndroidSDK\route-mapper\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
-        <dex dex="C:\Users\polymaze\Desktop\MAIN\PROJECTS\AndroidSDK\route-mapper\app\build\intermediates\pre-dexed\debug\classes-4e30052752c38aaabb0192c1f742f88e444409e1.jar" />
-    </item>
-    <item
-        jar="C:\Users\polymaze\Desktop\MAIN\PROJECTS\AndroidSDK\route-mapper\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="C:\Users\polymaze\Desktop\MAIN\PROJECTS\AndroidSDK\route-mapper\app\build\intermediates\pre-dexed\debug\classes-aadbda450f25e3d885ae3d0d6aad288576d53a5c.jar" />
-    </item>
-    <item
-        jar="C:\Users\polymaze\Desktop\MAIN\PROJECTS\AndroidSDK\route-mapper\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
-        <dex dex="C:\Users\polymaze\Desktop\MAIN\PROJECTS\AndroidSDK\route-mapper\app\build\intermediates\pre-dexed\debug\internal_impl-23.4.0-2ee076b5f3477e6e78a9b1cde97dd6807fb1b706.jar" />
+        sha1="54d65d51b5ebec588a19b2384efb6395b5bf5b18">
+        <dex dex="C:\Users\polymaze\Desktop\MAIN\PROJECTS\AndroidSDK\route-mapper\app\build\intermediates\pre-dexed\debug\MPAndroidChart-v3.0.0-beta1-79ab6affc7ac868f957e8fe86fd508ab70d69da1.jar" />
     </item>
 
 </items>

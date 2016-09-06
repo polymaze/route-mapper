@@ -47,21 +47,6 @@ public class CreateRouteFragment extends Fragment implements OnClickListener, On
         super.onActivityCreated(savedInstanceState);
     }
 
-    public void onStart(){
-        super.onStart();
-        EditText txtDate=(EditText)findViewById(R.id.txtdate);
-        txtDate.setOnFocusChangeListener(new View.OnFocusChangeListener(){
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if(hasFocus){
-                    DateDialog dialog = new DateDialog(v);
-                    FragmentTransaction ft = getFragmentManager().beginTransaction();
-                    dialog.show(ft,"DatePicker");
-                }
-            }
-        });
-    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
@@ -69,6 +54,7 @@ public class CreateRouteFragment extends Fragment implements OnClickListener, On
 
         mNameEdit = (EditText)rootView.findViewById(R.id.edit_route_name);
         mNameEdit.setOnEditorActionListener(this);
+
         mDateEdit = (EditText)rootView.findViewById(R.id.edit_route_date);
         mDateEdit.setOnEditorActionListener(this);
 
