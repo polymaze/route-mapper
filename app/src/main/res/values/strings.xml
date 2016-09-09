@@ -1,7 +1,15 @@
 <resources>
+
     <string name="app_name">Route Mapper</string>
 
     <!-- Buttons -->
     <string name="button_add_new_route">Add New Route</string>
     <string name="button_view_all_routes">View All Routes</string>
+
+    <!-- Filter Items -->
+    <string name="color_filter">Color</string>
+    <string name="grade_filter">Grade</string>
+    <string name="location_filter">Location</string>
+    <string name="setter_filter">Setter</string>
+
 </resources>

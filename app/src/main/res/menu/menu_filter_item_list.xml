@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/color_filter"
+        android:title="@string/color_filter"
+        android:checkable="true"/>
+    <item
+        android:id="@+id/grade_filter"
+        android:title="@string/grade_filter"
+        android:checkable="true"/>
+    <item
+        android:id="@+id/location_filter"
+        android:title="@string/location_filter"
+        android:checkable="true"/>
+    <item
+        android:id="@+id/setter_filter"
+        android:title="@string/setter_filter"
+        android:checkable="true"/>
+
+</menu>

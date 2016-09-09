@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- Full names for each location -->
     <string-array name="locations_array">
         <item>Slab Wall</item>
         <item>Near Slab Wall</item>
@@ -15,4 +17,22 @@
         <item>Lead Wall</item>
         <item>Exit Wall</item>
     </string-array>
+
+    <!-- Abbreviated names for each location -->
+    <string-array name="location_names_array">
+        <item>Slab</item>
+        <item>Near Slab</item>
+        <item>Chimney</item>
+        <item>Big Roof</item>
+        <item>Slant</item>
+        <item>Vert-R.</item>
+        <item>Dihedral</item>
+        <item>Vert-L.</item>
+        <item>Small Roof</item>
+        <item>Do. Arete</item>
+        <item>Near Lead</item>
+        <item>Lead</item>
+        <item>Exit</item>
+    </string-array>
+
 </resources>
