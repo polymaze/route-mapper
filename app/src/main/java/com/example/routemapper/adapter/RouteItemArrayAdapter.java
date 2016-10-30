@@ -39,6 +39,8 @@ public class RouteItemArrayAdapter extends ArrayAdapter<RouteItem>
         ViewHolder holder = (ViewHolder) convertView.getTag();
         holder.routeName.setText(route.name);
         holder.routeGrade.setText(String.valueOf(route.grade));
+        holder.routeColor.setText("■");
+        holder.routeColor.setTextColor(route.color);
 
         return convertView;
     }
@@ -47,11 +49,13 @@ public class RouteItemArrayAdapter extends ArrayAdapter<RouteItem>
     {
         private final TextView routeName;
         private final TextView routeGrade;
+        private final TextView routeColor;
 
         public ViewHolder (View view)
         {
             routeName = (TextView) view.findViewById(R.id.routeName);
             routeGrade = (TextView) view.findViewById(R.id.routeGrade);
+            routeColor = (TextView) view.findViewById(R.id.routeColor);
         }
     }
 }

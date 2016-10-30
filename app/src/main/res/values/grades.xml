@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string-array name="grades_array">
         <item>5.4</item>
         <item>5.5</item>
@@ -21,4 +22,5 @@
         <item>5.12d</item>
         <item>5.13a</item>
     </string-array>
+
 </resources>

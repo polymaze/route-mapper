@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- Application colors -->
     <color name="colorPrimary">#558B2F</color>
     <color name="colorPrimaryDark">#33691E</color>
     <color name="colorAccent">#CDDC39</color>
 
-
+    <!-- Route colors -->
     <color name="fl_pink">#EC407A</color>
     <color name="red">#FF0000</color>
     <color name="orange">#E65100</color>
@@ -20,6 +22,7 @@
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
 
+    <!-- Route colors Array -->
     <array name="colors_array">
         <item>@color/fl_pink</item>
         <item>@color/red</item>
@@ -36,4 +39,42 @@
         <item>@color/black</item>
         <item>@color/white</item>
     </array>
+
+    <!-- Route color names array -->
+    <string-array name="color_names_array">
+        <item>Pink</item>
+        <item>Red</item>
+        <item>Orange</item>
+        <item>Fl Orange</item>
+        <item>Yellow</item>
+        <item>Fl Yellow</item>
+        <item>Fl Green</item>
+        <item>Green</item>
+        <item>Dark Green</item>
+        <item>Blue</item>
+        <item>Purple</item>
+        <item>Brown</item>
+        <item>Black</item>
+        <item>White</item>
+    </string-array>
+
+    <!-- Route color hex values -->
+    <!-- Used for comparison -->
+    <string-array name="color_hex_array">
+        <item>#EC407A</item>
+        <item>#FF0000</item>
+        <item>#E65100</item>
+        <item>#FB8C00</item>
+        <item>#FFFF00</item>
+        <item>#EEFF41</item>
+        <item>#00FF00</item>
+        <item>#2E7D32</item>
+        <item>#004D40</item>
+        <item>#0000FF</item>
+        <item>#7F00FF</item>
+        <item>#3E2723</item>
+        <item>#000000</item>
+        <item>#FFFFFF</item>
+    </string-array>
+
 </resources>

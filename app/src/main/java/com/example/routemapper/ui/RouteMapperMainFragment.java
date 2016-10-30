@@ -1,11 +1,14 @@
 package com.example.routemapper.ui;
 
-import android.app.Fragment;
+        import android.app.Fragment;
 import android.app.LoaderManager.LoaderCallbacks;
 import android.content.Intent;
 import android.content.Loader;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -16,9 +19,10 @@ import com.example.routemapper.data_model.RouteItem;
 import com.example.routemapper.loader.RouteListLoader;
 import com.github.mikephil.charting.charts.BarChart;
 
+import java.util.ArrayList;
 import java.util.List;
 
-import static android.view.View.*;
+import static android.view.View.OnClickListener;
 
 public class RouteMapperMainFragment extends Fragment implements OnClickListener,
         LoaderCallbacks<List<RouteItem>>
@@ -28,11 +32,20 @@ public class RouteMapperMainFragment extends Fragment implements OnClickListener
     private List<RouteItem> mRouteList;
     private BarChart mBarChart;
 
+    private int mSelectedFilter;
+    private List <MenuItem> mFilterItems;
+    private ConfigureRouteBarChart mConfigureChart;
+    private int[] filterIds = {R.id.color_filter,
+            R.id.grade_filter,
+            R.id.location_filter,
+            R.id.setter_filter};
+
     @Override
     public void onActivityCreated(Bundle savedInstanceState)
     {
         super.onActivityCreated(savedInstanceState);
         getLoaderManager().initLoader(LOADER_ID, null, this).forceLoad();
+        setHasOptionsMenu(true);
     }
 
     @Override
@@ -45,9 +58,9 @@ public class RouteMapperMainFragment extends Fragment implements OnClickListener
     public void onLoadFinished(Loader<List<RouteItem>> loader, List<RouteItem> data)
     {
         mRouteList = data;
-        ConfigureRouteBarChart configureChart = new ConfigureRouteBarChart(getActivity(),
-                mRouteList, mBarChart);
-        configureChart.configure();
+        mSelectedFilter = R.id.grade_filter;
+        mConfigureChart = new ConfigureRouteBarChart(getActivity(), mRouteList, mBarChart);
+        mConfigureChart.configure(mSelectedFilter);
     }
 
     @Override
@@ -70,6 +83,38 @@ public class RouteMapperMainFragment extends Fragment implements OnClickListener
         addRouteButton.setOnClickListener(this);
 
         return rootView;
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater)
+    {
+        inflater.inflate(R.menu.menu_filter_item_list, menu);
+        MenuItem item = menu.findItem(R.id.grade_filter);
+        item.setChecked(true);
+        mFilterItems = new ArrayList<>();
+        for (int id : filterIds)
+        {
+            mFilterItems.add(menu.findItem(id));
+        }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        for (MenuItem menuItem : mFilterItems)
+        {
+            if (item == menuItem)
+            {
+                item.setChecked(true);
+                mSelectedFilter = item.getItemId();
+                mConfigureChart.configure(mSelectedFilter);
+            }
+            else
+            {
+                menuItem.setChecked(false);
+            }
+        }
+        return true;
     }
 
     @Override

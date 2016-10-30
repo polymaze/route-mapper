@@ -26,6 +26,7 @@ public class ConfigureRouteBarChart
     private List<RouteItem> mRouteList;
     private BarChart mBarChart;
     private Context mContext;
+    private String[] mResourceArray;
 
     public ConfigureRouteBarChart(Context context, List<RouteItem> list, BarChart barChart)
     {
@@ -40,20 +41,60 @@ public class ConfigureRouteBarChart
     }
 
     /**
-     * Gets the count of a specific grade among all routes in mRouteList
-     * @param grade: the grade for which a count is returned
-     * @return a count of the number of routes of the specified grade
+     * Sets the resource array used for getting a list of totals
+     * @param filter the item's data displayed on the bar chart
      */
 
-    public int getSpecificGradeCount(String grade)
+    public void getResources(int filter)
+    {
+        switch (filter)
+        {
+            case R.id.color_filter:
+                mResourceArray = mContext.getResources().getStringArray(R.array.color_hex_array);
+                break;
+            case R.id.location_filter:
+                mResourceArray = mContext.getResources().getStringArray(R.array.locations_array);
+                break;
+            case R.id.grade_filter:
+                mResourceArray = mContext.getResources().getStringArray(R.array.grades_array);
+                break;
+            case R.id.setter_filter:
+                mResourceArray = mContext.getResources().getStringArray(R.array.setters_array);
+                break;
+        }
+    }
+
+    /**
+     * Gets the count of a specific item among all routes in mRouteList
+     * @param item: the item for which a count is returned
+     * @return a count of the number of routes containing the specified item
+     */
+
+    public int getSpecificItemCount(int filter, String item)
     {
         int count = 0;
 
         for (int i = 0; i < getListSize(); i++)
         {
-            if (mRouteList.get(i).grade.equals(grade))
+            switch(filter)
             {
-                count++;
+                case R.id.color_filter:
+                    int color = mRouteList.get(i).color;
+                    String hexColor = String.format("#%06X", (0xFFFFFF & color));
+                    if (hexColor.equals(item)){ count++; }
+                    break;
+
+                case R.id.grade_filter:
+                    if (mRouteList.get(i).grade.equals(item)){ count++; }
+                    break;
+
+                case R.id.location_filter:
+                    if (mRouteList.get(i).location.equals(item)){ count++; }
+                    break;
+
+                case R.id.setter_filter:
+                    if (mRouteList.get(i).setter.equals(item)){ count++; }
+                    break;
             }
         }
         return count;
@@ -64,34 +105,34 @@ public class ConfigureRouteBarChart
      * @return a list containing the counts of each grade for all routes in mRouteList
      */
 
-    public List<Integer> getGradeTotals()
+    public List<Integer> getTotals(int filter)
     {
+        int count;
         List<Integer> data = new ArrayList<>();
-        String[] grades = mContext.getResources().getStringArray(R.array.grades_array);
 
-        int gradeCount;
-
-        for (String grade : grades)
+        for (String item : mResourceArray)
         {
-            gradeCount = getSpecificGradeCount(grade);
-            data.add(gradeCount);
+            count = getSpecificItemCount(filter, item);
+            data.add(count);
         }
+
         return data;
     }
 
-    public void configure()
+    public void configure(int filter)
     {
-        List<BarEntry> entries = new ArrayList<>();
-        List<Integer> gradeTotals = getGradeTotals();
+        getResources(filter);
 
-        for (int i = 0; i < gradeTotals.size(); i++)
+        List<BarEntry> entries = new ArrayList<>();
+        List<Integer> totals = getTotals(filter);
+
+        for (int i = 0; i < totals.size(); i++)
         {
-            entries.add(new BarEntry((float)i, (float)gradeTotals.get(i)));
+            entries.add(new BarEntry((float)i, (float)totals.get(i)));
         }
 
         BarDataSet set = new BarDataSet(entries, "BarDataSet");
         BarData barData = new BarData(set);
-        barData.setBarWidth(1.2f); // set custom bar width
 
         // configure chart
 
@@ -100,27 +141,48 @@ public class ConfigureRouteBarChart
         mBarChart.setDrawValueAboveBar(true); // show default value above each bar
         mBarChart.setDrawGridBackground(false); // remove grid background
         mBarChart.setDrawBorders(false); // remove borders around the entire chart
-        mBarChart.setDescription("Routes by Grade"); // set description text
+        mBarChart.setDescription(""); // remove description text
         mBarChart.setDrawBarShadow(true); // set a shadow around each bar
+        mBarChart.setScaleYEnabled(false); // disable scaling on the y-axis
 
         // configure x-axis
 
-        String[] grades = mContext.getResources().getStringArray(R.array.grades_array);
         XAxis xAxis = mBarChart.getXAxis();
-        xAxis.setValueFormatter(new XAxisValueFormatter(grades));
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM); // move to the bottom of the chart
         xAxis.setDrawGridLines(false); // remove x-axis grid lines
+        xAxis.setGranularity(1f);
+
+        AxisLabelValueFormatter formatter;
+        // TODO: Set value formatter after finding bug that causes ArrayIndexOutOfBounds exception.
+
+        if (filter == R.id.color_filter)
+        {
+            formatter = new AxisLabelValueFormatter(mContext.getResources().getStringArray(R.array.color_names_array));
+            // xAxis.setValueFormatter(formatter);
+        }
+        else if (filter == R.id.location_filter)
+        {
+            formatter = new AxisLabelValueFormatter(mContext.getResources().getStringArray(R.array.location_names_array));
+            // xAxis.setValueFormatter(formatter);
+        }
+        else
+        {
+            formatter = new AxisLabelValueFormatter(mResourceArray);
+            // xAxis.setValueFormatter(formatter);
+        }
 
         // configure y-axis
 
         YAxis left = mBarChart.getAxisLeft();
         YAxis right = mBarChart.getAxisRight();
         right.setEnabled(false); // disable the right y-axis
-        left.setDrawGridLines(false); // remove left y-axis grid lines
+        left.setEnabled(false); // disable the left y-axis
         left.setAxisMinValue(0); // set left min to 0
 
         // refresh the chart
 
+        barData.notifyDataChanged();
+        mBarChart.notifyDataSetChanged();
         mBarChart.invalidate();
     }
 
@@ -128,11 +190,11 @@ public class ConfigureRouteBarChart
      * This class is provided by the MPAndroidChart library
      */
 
-    public class XAxisValueFormatter implements AxisValueFormatter
+    public class AxisLabelValueFormatter implements AxisValueFormatter
     {
         private String[] mValues;
 
-        public XAxisValueFormatter(String[] values)
+        public AxisLabelValueFormatter(String[] values)
         {
             this.mValues = values;
         }
@@ -140,7 +202,7 @@ public class ConfigureRouteBarChart
         @Override
         public String getFormattedValue(float value, AxisBase axis)
         {
-            return mValues[(int) value];
+            return mValues[(int)value];
         }
 
         // this is only needed if numbers are returned, else return 0
