@@ -17,11 +17,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.routemapper.R;
+import com.example.routemapper.configuration.DateDialog;
 import com.example.routemapper.db.RouteDBHelper;
 import com.thebluealliance.spectrum.SpectrumPalette;
 
-import static android.view.View.*;
-import static android.widget.TextView.*;
+import static android.view.View.OnClickListener;
+import static android.widget.TextView.OnEditorActionListener;
 
 
 public class CreateRouteFragment extends Fragment implements OnClickListener, OnEditorActionListener,
@@ -56,7 +57,16 @@ public class CreateRouteFragment extends Fragment implements OnClickListener, On
         mNameEdit.setOnEditorActionListener(this);
 
         mDateEdit = (EditText)rootView.findViewById(R.id.edit_route_date);
-        mDateEdit.setOnEditorActionListener(this);
+        mDateEdit.setOnFocusChangeListener(new View.OnFocusChangeListener(){
+            @Override
+            public void onFocusChange(View v, boolean hasFocus){
+                if(hasFocus){
+                    DateDialog dialog = new DateDialog(v);
+                    FragmentTransaction ft = getFragmentManager().beginTransaction();
+                    dialog.show(ft, "DatePicker");
+                }
+            }
+        });
 
         mColorPalette = (SpectrumPalette) rootView.findViewById(R.id.palette);
         mColorPalette.setColors(getResources().getIntArray(R.array.colors_array));

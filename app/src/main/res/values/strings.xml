@@ -11,5 +11,9 @@
     <string name="grade_filter">Grade</string>
     <string name="location_filter">Location</string>
     <string name="setter_filter">Setter</string>
+    <string name="choose_route_date">Choose route date</string>
+    <string name="date">Date</string>
+    <string name="enter_route_name">Enter route name</string>
+    <string name="color">Color</string>
 
 </resources>
